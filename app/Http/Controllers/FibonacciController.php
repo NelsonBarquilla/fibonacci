@@ -11,7 +11,7 @@ class FibonacciController extends Controller
         return view('fibonacci');
     } 
 
-    public function exchangeCurrency(Request $request) {
+    public function output(Request $request) {
          
         $n = $request->number;
         $num1 = 0;

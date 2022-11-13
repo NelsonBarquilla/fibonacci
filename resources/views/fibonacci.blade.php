@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Laravel Currency Exchange Rate Calculator - Tutsmake.com</title>
+    <title>Fibonacci</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -15,10 +15,10 @@
                 Fibonacci
             </div>
             <div class="card-body">
-                <form id="currency-exchange-rate" action="#" method="post" class="form-group">
+                <form id="fibonacci-exam" action="#" method="post" class="form-group">
                     <div class="row mb-3">
                         <div class="col-md-4">
-                            <input type="text" name="number" class="form-control" value="1">
+                            <input type="text" name="number" class="form-control" value="0">
                         </div>
                         <div class="col-md-4">
                    
@@ -48,14 +48,14 @@
             //stop submit the form, we will post it manually.
             event.preventDefault();
             // Get form
-            var form = $('#currency-exchange-rate')[0];
+            var form = $('#fibonacci-exam')[0];
             // Create an FormData object 
             var data = new FormData(form);
             // disabled the submit button
             $("#btnSubmit").prop("disabled", true);
             $.ajax({
                 type: "POST",
-                url: "{{ url('currency') }}",
+                url: "{{ url('fibonacci') }}",
                 data: data,
                 processData: false,
                 contentType: false,

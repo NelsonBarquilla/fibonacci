@@ -18,5 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('currency',[FibonacciController::class, 'index']);
-Route::post('currency',[FibonacciController::class, 'exchangeCurrency']);
+Route::get('fibonacci',[FibonacciController::class, 'index']);
+Route::post('fibonacci',[FibonacciController::class, 'output']);
